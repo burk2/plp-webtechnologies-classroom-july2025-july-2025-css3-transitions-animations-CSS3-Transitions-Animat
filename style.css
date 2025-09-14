@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/* Part 1: CSS Transitions for Cars */
+.car {
+  width: 150px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 10px;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.5s ease, background 0.3s ease;
+}
+
+.sedan { background-color: #007bff; }
+.suv { background-color: #28a745; }
+.sports { background-color: #dc3545; }
+
+/* Hover effect */
+.car:hover {
+  transform: scale(1.2);
+  background-color: #ffc107;
+}
+
+/* Part 3: Keyframes Animation */
+@keyframes drive {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(300px) rotate(10deg); }
+  100% { transform: translateX(0); }
+}
+
+.animate {
+  animation: drive 2s ease-in-out forwards;
+}
